@@ -18,6 +18,10 @@ const config = defineConfig({
     tanstackStart(),
     viteReact(),
   ],
+  server: {
+    host: true, // Allow external connections
+    allowedHosts: ["all"], // Allow all hosts (prevents blocking from proxy/iframe hosts)
+  },
 })
 
 export default config
